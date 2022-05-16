@@ -4,12 +4,12 @@ import GenerativeArt from './GenerativeArt'
 function Header() {
   return (
     <header className='relative h-[70vh] flex flex-col justify-center items-center sm:flex-row'>
-      <div className='absolute top-16 w-full overflow-hidden'>
+      <div className='absolute top-16 w-full aspect-square sm:w-96 rounded-full overflow-hidden'>
         <GenerativeArt/>
       </div>
-      <div className='relative text-left'>
-        <h1 className='text-4xl md:text-6xl text-blue-900'>Po-Hsiang Lu</h1>
-        <h2 className='text-base md:text-xl text-slate-500'>Front-End Developer</h2>
+      <div className='relative flex items-baseline mt-10 [text-shadow:2px_2px_0px_rgba(0,0,0,1)]'>
+        <h1 className='text-3xl md:text-4xl text-white mx-2'>Po-Hsiang Lu</h1>
+        <h2 className='text-base md:text-xl text-slate-200 mx-2'>Front-End Developer</h2>
       </div>
       
     </header>
