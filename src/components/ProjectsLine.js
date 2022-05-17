@@ -43,11 +43,19 @@ function ProjectsLine() {
         </div>
         {/* Project Block - FoodBag */}
         <div className='my-16 flex md:justify-center md:items-center'>
-          <div className='order-2 relative w-full h-96 md:w-80 md:aspect-[1/2] md:mr-32 shadow-lg'>
+          {/* The before part is the speaker of the smartphone */}
+          <div
+            className={
+              'order-2 relative w-full h-96 shadow-lg md:w-80 md:h-auto md:aspect-[5/11] md:mr-32 ' + 
+              'md:border-transparent md:border-x-8 md:border-b-[16px] md:border-t-[60px] md:rounded-3xl ' +
+              'md:box-border md:bg-cover md:bg-gradient-radial md:from-slate-800 md:via-slate-800 md:to-slate-600 ' + 
+              'md:bg-clip-border before:md:contents-[""] before:md:w-16 before:md:h-1 before:md:bg-stone-500 before:md:absolute ' +
+              'before:md:-top-12 before:md:left-1/2 before:md:-translate-x-1/2 before:md:rounded-md'
+            }>
             <img
               src={foodbag} 
               alt="Foodie Club Project Screenshot"
-              className='w-full h-full object-cover object-left'
+              className='w-full h-full object-cover object-left md:rounded-xl'
             />
             {/* Text Block in Small Screen */}
             <div className='md:hidden absolute top-0 flex flex-col items-start p-6 w-full h-full bg-slate-900 opacity-90'>
