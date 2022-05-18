@@ -6,7 +6,7 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App p-2">
+    <div className="App p-2 font-mono">
       <NavBar />
       <Header />
       <ProjectsLine />
