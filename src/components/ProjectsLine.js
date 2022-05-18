@@ -30,7 +30,7 @@ function ProjectsLine() {
               <p className='text-white text-left my-8'>{textContent.projects.foodieClub.description}</p>
               {/* Tech Stack */}
               <div className='text-sky-500 flex flex-wrap justify-self-end text-xs'>
-                {textContent.projects.foodieClub.techStacks.map(tech => <span className='mx-2'>{tech}</span>)}
+                {textContent.projects.foodieClub.techStacks.map((tech, idx) => <span key={idx} className='mx-2'>{tech}</span>)}
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ function ProjectsLine() {
             <p className='text-slate-700 text-left my-8'>{textContent.projects.foodieClub.description}</p>
             {/* Tech Stack */}
             <div className='text-sky-800 flex flex-wrap justify-self-end text-xs'>
-              {textContent.projects.foodieClub.techStacks.map(tech => <span className='mx-2'>{tech}</span>)}
+              {textContent.projects.foodieClub.techStacks.map((tech, idx) => <span key={idx} className='mx-2'>{tech}</span>)}
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ function ProjectsLine() {
               <p className='text-white text-left my-8'>{textContent.projects.foodBag.description}</p>
               {/* Tech Stack */}
               <div className='text-sky-500 flex flex-wrap justify-self-end text-xs'>
-                {textContent.projects.foodBag.techStacks.map(tech => <span className='mx-2'>{tech}</span>)}
+                {textContent.projects.foodBag.techStacks.map((tech, idx) => <span key={idx} className='mx-2'>{tech}</span>)}
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ function ProjectsLine() {
             <p className='text-slate-700 text-left my-8'>{textContent.projects.foodBag.description}</p>
             {/* Tech Stack */}
             <div className='text-sky-800 flex flex-wrap justify-self-end text-xs'>
-              {textContent.projects.foodBag.techStacks.map(tech => <span className='mx-2'>{tech}</span>)}
+              {textContent.projects.foodBag.techStacks.map((tech, idx) => <span key={idx} className='mx-2'>{tech}</span>)}
             </div>
           </div>
         </div>

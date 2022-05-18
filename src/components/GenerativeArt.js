@@ -1,5 +1,6 @@
 import React from 'react'
 import Sketch from 'react-p5'
+import { browserName } from 'react-device-detect'
 
 let width = 400
 let height = 200
@@ -8,11 +9,13 @@ let rows = height / scale
 let cols = width / scale
 let increment = 0.1
 let zOffset = 0
+
 function GenerativeArt() {
+  console.log('GenerativeArt')
   const setup = (p5, canvasParentRef) => {
 		// use parent to render the canvas in this ref
 		// (without that p5 will render the canvas outside of your component)
-		p5.createCanvas(width, height).parent(canvasParentRef)
+    p5.createCanvas(width, height).parent(canvasParentRef)
 	};
 
 	const draw = (p5) => {
@@ -46,7 +49,12 @@ function GenerativeArt() {
 		// please use normal variables or class properties for these purposes
 	};
   return (
-    <Sketch setup={setup} draw={draw} />
+    <div>
+      <Sketch setup={setup} draw={draw} />
+      {/* A bug in p5 caused Chrome to run the p5 setup function twice, which is the effect I want.
+      Therefore, for browsers that are not Chrome, render <Sketch/> twice  */}
+      {browserName !== 'Chrome' && <Sketch setup={setup} draw={draw} />}
+    </div>
   )
 }
 
