@@ -3,6 +3,8 @@ import foodieClub from '../img/foodie-club.png'
 import foodbag from '../img/foodbag.gif'
 import { textContent } from '../constants/textContent'
 import { useVisibility } from '../hooks/useVisibility'
+import { FaGithub } from 'react-icons/fa'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 function ProjectsLine() {
   const [isFoodieClubVisible, foodieClubRef] = useVisibility()
@@ -16,7 +18,7 @@ function ProjectsLine() {
       {/* Project Blocks Container */}
       <div className='relative mt-12'>
         {/* Project Block - Foodie Club */}
-        <div className='my-16 flex'>
+        <div className='my-16 flex items-center'>
           <div ref={foodieClubRef} className={`relative w-full md:w-2/3 h-96 shadow-lg ${isFoodieClubVisible ? 'md:animate-fadein-from-l' : 'md:opacity-0'}`}>
             <img
               src={foodieClub} 
@@ -32,6 +34,15 @@ function ProjectsLine() {
               <div className='text-sky-500 flex flex-wrap justify-self-end text-xs'>
                 {textContent.projects.foodieClub.techStacks.map((tech, idx) => <span key={idx} className='mx-2'>{tech}</span>)}
               </div>
+              {/* Links - Github, Website */}
+              <div className='flex items-center mt-6'>
+                <a className='cursor-pointer mx-2' href='https://github.com/matteo1222/foodie-club' target='_blank' rel='noreferrer'>
+                  <FaGithub size='1.5em' className='text-slate-300'/>
+                </a>
+                <a className='cursor-pointer mx-3' href='https://foodieclub.co' target='_blank' rel='noreferrer'>
+                  <FaExternalLinkAlt size='1.3em' className='text-slate-300'/>
+                </a>
+              </div>
             </div>
           </div>
           {/* Text Block in Large Screen */}
@@ -42,6 +53,15 @@ function ProjectsLine() {
             {/* Tech Stack */}
             <div className='text-sky-800 flex flex-wrap justify-self-end text-xs'>
               {textContent.projects.foodieClub.techStacks.map((tech, idx) => <span key={idx} className='mx-2'>{tech}</span>)}
+            </div>
+            {/* Links - Github, Website */}
+            <div className='flex items-center mt-6'>
+              <a className='cursor-pointer mx-2' href='https://github.com/matteo1222/foodie-club' target='_blank' rel='noreferrer'>
+                <FaGithub size='1.5em' className='text-slate-500'/>
+              </a>
+              <a className='cursor-pointer mx-3' href='https://foodieclub.co' target='_blank' rel='noreferrer'>
+                <FaExternalLinkAlt size='1.3em' className='text-slate-500'/>
+              </a>
             </div>
           </div>
         </div>
