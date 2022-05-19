@@ -2,7 +2,7 @@ import React from 'react'
 
 const NavBar = () => {
   return (
-    <nav className='px-4'>
+    <nav className='px-4 lg:px-16'>
       <ul className='flex h-20 items-center justify-end text-slate-500'>
         <li className='mx-6'>
           <a href='#projects'>Projects</a>

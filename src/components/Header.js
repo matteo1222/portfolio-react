@@ -4,7 +4,7 @@ import GenerativeArt from './GenerativeArt'
 function Header() {
   return (
     <header className='relative h-[70vh] flex flex-col justify-center items-center sm:flex-row'>
-      <div className='absolute top-16 w-full max-w-7xl aspect-square sm:w-96 rounded-full overflow-hidden'>
+      <div className='absolute top-16 w-full max-w-sm aspect-square rounded-full overflow-hidden'>
         <GenerativeArt/>
       </div>
       <div className='relative flex flex-col sm:flex-row items-baseline mt-10 [text-shadow:2px_2px_0px_rgba(0,0,0,1)]'>
