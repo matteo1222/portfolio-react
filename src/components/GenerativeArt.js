@@ -10,20 +10,20 @@ let cols = width / scale
 let increment = 0.1
 let zOffset = 0
 
-function GenerativeArt() {
-  console.log('GenerativeArt')
+function GenerativeArt({ onReady }) {
   const setup = (p5, canvasParentRef) => {
 		// use parent to render the canvas in this ref
 		// (without that p5 will render the canvas outside of your component)
     p5.createCanvas(width, height).parent(canvasParentRef)
+    onReady()
 	};
 
 	const draw = (p5) => {
     p5.background(0)
 
-    let fps = p5.frameRate()
-    p5.stroke(0);
-    p5.text("FPS: " + fps.toFixed(2), 10, 10);
+    // p5.stroke(0);
+    // let fps = p5.frameRate()
+    // p5.text("FPS: " + fps.toFixed(2), 10, 10);
 
     let yOffset = 0
     for (let y = 0; y < rows; y++) {
