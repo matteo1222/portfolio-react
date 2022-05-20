@@ -1,10 +1,14 @@
 import React from 'react'
-import foodieClub from '../img/foodie-club.png'
-import foodbag from '../img/foodbag.gif'
+import foodieClubPNG from '../img/foodie-club.png'
+import foodieClubWebP from '../img/foodie-club.webp'
+import foodbagWebm from '../img/foodbag.webm'
+import foodbagPNG from '../img/foodbag.png'
 import { textContent } from '../constants/textContent'
 import { useVisibility } from '../hooks/useVisibility'
 import { FaGithub } from 'react-icons/fa'
 import { FaExternalLinkAlt } from 'react-icons/fa'
+import ImgWithFallback from './ImgWithFallback'
+import VideoWithFallback from './VideoWithFallback'
 
 function ProjectsLine() {
   const [isFoodieClubVisible, foodieClubRef] = useVisibility()
@@ -20,9 +24,10 @@ function ProjectsLine() {
         {/* Project Block - Foodie Club */}
         <div className='my-16 flex items-center'>
           <div ref={foodieClubRef} className={`relative w-full md:w-2/3 h-96 shadow-lg ${isFoodieClubVisible ? 'md:animate-fadein-from-l' : 'md:opacity-0'}`}>
-            <img
-              src={foodieClub} 
-              alt="Foodie Club Project Screenshot"
+            <ImgWithFallback
+              src={foodieClubWebP}
+              fallback={foodieClubPNG}
+              alt='Foodie Club Project Screenshot'
               className='w-full h-full object-cover object-left'
             />
             {/* Text Block in Small Screen */}
@@ -78,9 +83,10 @@ function ProjectsLine() {
                before:md:-top-12 before:md:left-1/2 before:md:-translate-x-1/2 before:md:rounded-md
                ${isFoodBagVisible ? 'md:animate-fadein-from-r' : 'md:opacity-0'}`
             }>
-            <img
-              src={foodbag} 
-              alt="Foodie Club Project Screenshot"
+            <VideoWithFallback
+              src={foodbagWebm}
+              alt='FoodBag Project Screenshot'
+              fallback={foodbagPNG}
               className='w-full h-full object-cover object-left md:rounded-xl'
             />
             {/* Text Block in Small Screen */}

@@ -9,7 +9,7 @@ export const textContent = {
     foodBag: {
       title: 'FoodBag (Ongoing Development)',
       subtitle: 'Get great food at a cheaper price',
-      description: 'A mobile app for shoper owners, such as bakeries, to post food surplus of the day and sale them with discount. Users will get notified when there is food surplus available.',
+      description: 'A mobile app for shop owners, such as bakeries, to post food surplus of the day and sale them with discount. Users will get notified when there is food surplus available.',
       techStacks: ['React Native', 'AWS Amplify']
     }
   }
