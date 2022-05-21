@@ -1,6 +1,5 @@
 import React from 'react'
 import Sketch from 'react-p5'
-import { browserName } from 'react-device-detect'
 
 let width = 400
 let height = 200
@@ -51,9 +50,7 @@ function GenerativeArt({ onReady }) {
   return (
     <div>
       <Sketch setup={setup} draw={draw} />
-      {/* A bug in p5 caused Chrome to run the p5 setup function twice, which is the effect I want.
-      Therefore, for browsers that are not Chrome, render <Sketch/> twice  */}
-      {browserName !== 'Chrome' && <Sketch setup={setup} draw={draw} />}
+      <Sketch setup={setup} draw={draw} />
     </div>
   )
 }
