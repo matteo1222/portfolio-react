@@ -19,7 +19,7 @@ function ProjectsLine() {
       id="projects"
       className="relative flex flex-col items-center md:mt-8"
     >
-      <h5>Projects</h5>
+      <h3>Projects</h3>
       {/* The Straight Line */}
       <div className="absolute w-0 h-full mt-6 border border-slate-400"></div>
       {/* Project Blocks Container */}

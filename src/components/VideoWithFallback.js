@@ -1,12 +1,18 @@
-import React from 'react'
+import React from "react";
 
-function VideoWithFallback({ src, fallback, alt, ...delegated }) {
+function VideoWithFallback({
+  src,
+  fallback,
+  type = "image/png",
+  alt,
+  ...delegated
+}) {
   return (
     <video autoPlay={true} loop={true} poster={fallback} {...delegated}>
-      <source src={src} type='video/webm'/>
-      <img src={fallback} alt={alt} type='image/png'/>
+      <source src={src} type="video/webm" />
+      <img src={fallback} alt={alt} type={type} />
     </video>
-  )
+  );
 }
 
-export default VideoWithFallback
+export default VideoWithFallback;

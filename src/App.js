@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import ProjectsLine from "./components/ProjectsLine";
 import Contact from "./components/Contact";
+import Experiments from "./components/Experiments";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
       <NavBar />
       <Header />
       <ProjectsLine />
+      {/* Spacing */}
+      <div className="p-10"></div>
+      <Experiments />
       <Contact />
     </main>
   );
