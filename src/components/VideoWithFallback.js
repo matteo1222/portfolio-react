@@ -8,7 +8,13 @@ function VideoWithFallback({
   ...delegated
 }) {
   return (
-    <video autoPlay={true} loop={true} poster={fallback} {...delegated}>
+    <video
+      autoPlay={true}
+      muted={true}
+      loop={true}
+      poster={fallback}
+      {...delegated}
+    >
       <source src={src} type="video/webm" />
       <img src={fallback} alt={alt} type={type} />
     </video>
