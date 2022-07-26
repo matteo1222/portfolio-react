@@ -9,7 +9,7 @@ function ExperimentWrapper({ children, href, title, description }) {
         target="_blank"
         rel="noreferrer"
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-25"></div>
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-slate-500 opacity-0 group-hover:opacity-25"></div> */}
         <div className="w-60 h-60 mt-4 rounded-full overflow-hidden shadow-lg group-hover:scale-105 transition-transform bg-black">
           {children}
         </div>
