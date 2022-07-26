@@ -14,7 +14,7 @@ function Experiments() {
       <h3 className="text-4xl">Experiments</h3>
       {/* Spacing */}
       <div className="p-6"></div>
-      <div className="flex justify-center items-center p-5">
+      <div className="flex flex-wrap justify-center items-center p-5">
         <ExperimentWrapper
           href="https://codepen.io/matteo1222-the-selector/pen/LYdYoVL"
           title="π"
