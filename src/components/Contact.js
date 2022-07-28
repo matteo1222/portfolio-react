@@ -1,17 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Contact() {
-  const EMAIL = "matthewlu.tw@gmail.com";
-  const [copied, setCopied] = useState(false);
-
-  const handleClick = () => {
-    setCopied(true);
-    navigator.clipboard.writeText(EMAIL);
-    setTimeout(() => {
-      setCopied(false);
-    }, 1000);
-  };
-
   return (
     <section
       id="contact"
@@ -35,13 +24,6 @@ function Contact() {
         >
           Say Hi
         </a>
-        {/* <p
-          className={`origin-bottom opacity-0 ${
-            copied ? "animate-rotate-in-and-out" : ""
-          }`}
-        >
-          Email Copied!
-        </p> */}
       </address>
     </section>
   );

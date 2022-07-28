@@ -1,12 +1,16 @@
 import React from "react";
 import VideoWithFallback from "./VideoWithFallback";
 import piWebm from "../img/PI.webm";
-import piGif from "../img/PI.gif";
 import pinkBluePlanetWebm from "../img/pink-blue-planet.webm";
-import pinkBluePlanetGif from "../img/pink-blue-planet.gif";
 import circlesWebm from "../img/circles.webm";
-import circlesGif from "../img/circles.gif";
 import ExperimentWrapper from "./ExperimentWrapper";
+
+// fallback image dynamic import
+const piGif = React.lazy(() => import("../img/PI.gif"));
+const pinkBluePlanetGif = React.lazy(() =>
+  import("../img/pink-blue-planet.gif")
+);
+const circlesGif = React.lazy(() => import("../img/circles.gif"));
 
 function Experiments() {
   return (

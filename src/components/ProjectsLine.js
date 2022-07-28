@@ -1,14 +1,15 @@
 import React from "react";
-import foodieClubPNG from "../img/foodie-club.png";
 import foodieClubWebP from "../img/foodie-club.webp";
 import foodbagWebm from "../img/foodbag.webm";
-import foodbagPNG from "../img/foodbag.png";
 import { textContent } from "../constants/textContent";
 import { useVisibility } from "../hooks/useVisibility";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import ImgWithFallback from "./ImgWithFallback";
 import VideoWithFallback from "./VideoWithFallback";
+// fallback image, dynamic loading
+const foodieClubPNG = React.lazy(() => import("../img/foodie-club.png"));
+const foodbagPNG = React.lazy(() => import("../img/foodbag.png"));
 
 function ProjectsLine() {
   const [isFoodieClubVisible, foodieClubRef] = useVisibility();
