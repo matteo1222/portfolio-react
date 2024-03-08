@@ -70,7 +70,7 @@ function ProjectsLine() {
                 </a>
                 <a
                   className="cursor-pointer mx-3"
-                  href="https://foodieclub.co"
+                  href="https://matthewlu.com/foodie-club"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -110,7 +110,7 @@ function ProjectsLine() {
               </a>
               <a
                 className="cursor-pointer mx-3"
-                href="https://foodieclub.co"
+                href="https://matthewlu.com/foodie-club"
                 target="_blank"
                 rel="noreferrer"
               >
